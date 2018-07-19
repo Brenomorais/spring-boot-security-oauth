@@ -26,6 +26,7 @@ public class SegurancaConfig extends WebSecurityConfigurerAdapter {
 		auth.inMemoryAuthentication().withUser("sistema1").password("123").roles("ADMIN");
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return NoOpPasswordEncoder.getInstance();
